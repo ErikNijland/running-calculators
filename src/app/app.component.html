@@ -76,16 +76,19 @@
     </thead>
     <tbody>
       <tr
+        [ngClass]="{
+          'bg-primary text-white': row[0]
+        }"
         *ngFor="let row of rows"
         [id]="'pace-' + row[0]">
 
-        <th>{{row[0] | pace}}</th>
-        <th>{{row[1] | speed}}</th>
-        <td class="text-right">{{row[2] | time}}</td>
+        <th>{{row[1] | pace}} <ng-container *ngIf="row[0]">⭐</ng-container></th>
+        <th>{{row[2] | speed}}</th>
         <td class="text-right">{{row[3] | time}}</td>
         <td class="text-right">{{row[4] | time}}</td>
         <td class="text-right">{{row[5] | time}}</td>
         <td class="text-right">{{row[6] | time}}</td>
+        <td class="text-right">{{row[7] | time}}</td>
       </tr>
     </tbody>
   </table>

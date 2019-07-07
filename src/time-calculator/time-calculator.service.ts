@@ -12,7 +12,7 @@ export class TimeCalculatorService {
     const generatedPaceEntries = Array.from({length: numberOfSteps}, (_, index: number) => {
       return minPaceInSecs + index * stepSizeInSecs;
     });
-    const customPaceEntries = [ 319, 360 ];
+    const customPaceEntries = [ 319, 341, 360 ];
     const allPaceEntries = union(generatedPaceEntries, customPaceEntries).sort();
 
     return allPaceEntries.map((paceInSecs: number) => {
@@ -20,6 +20,7 @@ export class TimeCalculatorService {
       const speedInKmH = hourInSecs / paceInSecs;
 
       return [
+        customPaceEntries.includes(paceInSecs),
         paceInSecs,
         speedInKmH,
         paceInSecs *  1000,
