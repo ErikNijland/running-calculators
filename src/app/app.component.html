@@ -1,0 +1,92 @@
+<div class="pt-4 pb-4">
+  <h1 class="mt-0 mb-4 text-center">🏃 Running calculators 👟</h1>
+
+  <ul class="nav justify-content-center">
+    <li class="nav-item">
+      <a class="nav-link active" href="https://www.example.com/">Pace calculator</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Time calculator</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Distance calculator</a>
+    </li>
+  </ul>
+</div>
+
+<div class="bg-light pt-4 pb-4">
+  <h2 class="mb-4 text-center">Pace calculator</h2>
+  <form>
+    <div class="container">
+      <div class="row">
+        <div class="col-4 offset-2">
+          <h3 class="h4">Distance</h3>
+          <div class="form-group">
+            <label for="distance_km">Kilometers</label>
+            <input id="distance_km" class="form-control" type="number">
+          </div>
+          <div class="form-group">
+            <label for="distance_m">Meters</label>
+            <input id="distance_m" class="form-control" type="number">
+          </div>
+        </div>
+        <div class="col-4">
+          <h3 class="h4">Time</h3>
+          <div class="form-group">
+            <label for="time_hours">Hours</label>
+            <input id="time_hours" class="form-control" type="number">
+          </div>
+          <div class="form-group">
+            <label for="time_minutes">Minutes</label>
+            <input id="time_minutes" class="form-control" type="number">
+          </div>
+          <div class="form-group">
+            <label for="time_seconds">Seconds</label>
+            <input id="time_seconds" class="form-control" type="number">
+          </div>
+        </div>
+      </div>
+      <div class="col-8 offset-2 text-center">
+        <button class="btn btn-primary btn-lg">
+          ⏱ Calculate pace
+        </button>
+
+        <div class="alert alert-primary mt-4" role="alert">
+          Your pace: <span class="font-weight-bold">5:19 / km</span><br>
+          <br>
+          Your pace has been added to <a href="#pace-319">the table below</a>.
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="container">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Pace</th>
+        <th>Speed</th>
+        <th class="text-right">1 km</th>
+        <th class="text-right">5 km</th>
+        <th class="text-right">10 km</th>
+        <th class="text-right">21.1 km</th>
+        <th class="text-right">42.195 km</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let row of rows"
+        [id]="'pace-' + row[0]">
+
+        <th>{{row[0] | pace}}</th>
+        <th>{{row[1] | speed}}</th>
+        <td class="text-right">{{row[2] | time}}</td>
+        <td class="text-right">{{row[3] | time}}</td>
+        <td class="text-right">{{row[4] | time}}</td>
+        <td class="text-right">{{row[5] | time}}</td>
+        <td class="text-right">{{row[6] | time}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
