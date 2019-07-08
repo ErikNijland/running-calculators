@@ -5,7 +5,9 @@
   "projects": {
     "pace-calculator": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -25,7 +27,7 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -85,7 +87,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }

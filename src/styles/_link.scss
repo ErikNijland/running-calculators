@@ -1,0 +1,12 @@
+.rc-link {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &--active,
+  &--active:hover {
+    text-decoration: none;
+  }
+}
