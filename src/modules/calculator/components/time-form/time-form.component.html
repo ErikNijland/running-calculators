@@ -1,0 +1,14 @@
+<h3 class="h4">Time</h3>
+
+<div class="form-group">
+  <label for="time_hours">Hours</label>
+  <input id="time_hours" class="form-control" type="number" [formControl]="timeForm.get('hours')">
+</div>
+<div class="form-group">
+  <label for="time_minutes">Minutes</label>
+  <input id="time_minutes" class="form-control" type="number" [formControl]="timeForm.get('minutes')">
+</div>
+<div class="form-group">
+  <label for="time_seconds">Seconds</label>
+  <input id="time_seconds" class="form-control" type="number" [formControl]="timeForm.get('seconds')">
+</div>
