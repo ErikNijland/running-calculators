@@ -6,3 +6,5 @@
 - pace input
 - <title> based on the current page
 - show user calculations in timetable
+- distance quick links
+- check whitespace in ui
