@@ -2,7 +2,7 @@ import {Pipe, PipeTransform} from "@angular/core";
 import {DecimalPipe} from "@angular/common";
 
 @Pipe({
-  name: 'speed'
+  name: 'rcSpeed'
 })
 export class SpeedPipe implements PipeTransform {
   constructor(private decimalPipe: DecimalPipe) {}

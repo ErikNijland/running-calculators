@@ -2,7 +2,7 @@ import {Injectable} from "@angular/core";
 import {union} from 'lodash';
 
 @Injectable()
-export class TimeCalculatorService {
+export class CalculatorService {
   getTableData() {
     const minPaceInSecs = 270;
     const maxPaceInSecs = 510;

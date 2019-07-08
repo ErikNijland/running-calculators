@@ -1,7 +1,7 @@
 import {Pipe, PipeTransform} from "@angular/core";
 
 @Pipe({
-  name: 'pace'
+  name: 'rcPace'
 })
 export class PacePipe implements PipeTransform {
   transform(paceInSecs: number): string {
