@@ -8,6 +8,7 @@ import {PaceFormComponent} from "./components/pace-form/pace-form.component";
 import {TimeFormComponent} from "./components/time-form/time-form.component";
 import {ReactiveFormsModule} from "@angular/forms";
 import {CommonModule} from "@angular/common";
+import {FormatterModule} from "../formatter/formatter.module";
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import {CommonModule} from "@angular/common";
   ],
   imports: [
     CommonModule,
+    FormatterModule,
     ReactiveFormsModule,
   ]
 })

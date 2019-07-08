@@ -1,8 +1,13 @@
 import {Injectable} from "@angular/core";
 import {union} from 'lodash';
+import {FormGroup} from "@angular/forms";
 
 @Injectable()
 export class CalculatorService {
+  calculatePace(paceFormData: FormGroup) {
+    return 253;
+  }
+
   getTableData() {
     const minPaceInSecs = 270;
     const maxPaceInSecs = 510;

@@ -6,3 +6,4 @@
 - distance input
 - time input
 - pace input
+- show user calculations in timetable
