@@ -1,9 +1,9 @@
-import {LOCALE_ID, NgModule} from "@angular/core";
-import {PacePipe} from "./pipes/pace/pace.pipe";
-import {SpeedPipe} from "./pipes/speed/speed.pipe";
-import {TimePipe} from "./pipes/time/time.pipe";
+import {LOCALE_ID, NgModule} from '@angular/core';
+import {PacePipe} from './pipes/pace/pace.pipe';
+import {SpeedPipe} from './pipes/speed/speed.pipe';
+import {TimePipe} from './pipes/time/time.pipe';
 import localeNl from '@angular/common/locales/nl';
-import {DecimalPipe, registerLocaleData} from "@angular/common";
+import {DecimalPipe, registerLocaleData} from '@angular/common';
 
 registerLocaleData(localeNl);
 

@@ -1,12 +1,12 @@
-import {Component, OnInit} from "@angular/core";
-import {FormGroup} from "@angular/forms";
-import {CalculatorService} from "../../services/calculator/calculator.service";
+import {Component, OnInit} from '@angular/core';
+import {FormGroup} from '@angular/forms';
+import {CalculatorService} from '../../services/calculator/calculator.service';
 
 @Component({
   selector: 'rc-pace-calculator',
   templateUrl: './pace-calculator.html',
 })
-export class PaceCalculator implements OnInit {
+export class PaceCalculatorComponent implements OnInit {
   paceForm: FormGroup;
   paceInSecs: number;
 

@@ -1,11 +1,11 @@
-import {Routes} from "@angular/router";
-import {PaceCalculator} from "../calculator/components/pace-calculator/pace-calculator";
-import {DistanceCalculator} from "../calculator/components/distance-calculator/distance-calculator";
-import {TimeCalculator} from "../calculator/components/time-calculator/time-calculator";
+import {Routes} from '@angular/router';
+import {PaceCalculatorComponent} from '../calculator/components/pace-calculator/pace-calculator';
+import {DistanceCalculatorComponent} from '../calculator/components/distance-calculator/distance-calculator';
+import {TimeCalculatorComponent} from '../calculator/components/time-calculator/time-calculator';
 
 export const appRoutes: Routes = [
-  { path: 'distance', component: DistanceCalculator },
-  { path: 'pace', component: PaceCalculator },
-  { path: 'time', component: TimeCalculator },
-  { path: '**', redirectTo: 'distance' },
+  { path: 'distance', component: DistanceCalculatorComponent },
+  { path: 'pace', component: PaceCalculatorComponent },
+  { path: 'time', component: TimeCalculatorComponent },
+  { path: '**', redirectTo: 'pace' },
 ];

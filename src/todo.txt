@@ -1,9 +1,8 @@
-- pace calculator
+- form group validation > 0
 - generic integer input component
 - error message for non-integer values
 - time calculator
 - distance calculator
-- distance input
-- time input
 - pace input
+- <title> based on the current page
 - show user calculations in timetable

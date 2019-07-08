@@ -1,11 +1,16 @@
-import {Injectable} from "@angular/core";
+import {Injectable} from '@angular/core';
 import {union} from 'lodash';
-import {FormGroup} from "@angular/forms";
+import {PaceCalculatorValue} from '../../types/pace-calculator-value';
+import {DistanceFormValue} from '../../types/distance-form-value';
+import {TimeFormValue} from '../../types/time-form-value';
 
 @Injectable()
 export class CalculatorService {
-  calculatePace(paceFormData: FormGroup) {
-    return 253;
+  calculatePace(paceFormValue: PaceCalculatorValue) {
+    const distanceInMeters = this.getDistanceInMeters(paceFormValue.distance);
+    const timeInSeconds = this.getTimeInSeconds(paceFormValue.time);
+
+    return Math.ceil(timeInSeconds / distanceInMeters * 1000);
   }
 
   getTableData() {
@@ -36,5 +41,12 @@ export class CalculatorService {
       ];
     });
   }
-}
 
+  private getDistanceInMeters(distanceFormValue: DistanceFormValue) {
+    return distanceFormValue.kilometers * 1000 + distanceFormValue.meters;
+  }
+
+  private getTimeInSeconds(timeFormValue: TimeFormValue) {
+    return timeFormValue.hours * 60 * 60 + timeFormValue.minutes * 60 + timeFormValue.seconds;
+  }
+}

@@ -1,11 +1,11 @@
-import {Component} from "@angular/core";
-import {CalculatorService} from "../../../calculator/services/calculator/calculator.service";
+import {Component, OnInit} from '@angular/core';
+import {CalculatorService} from '../../../calculator/services/calculator/calculator.service';
 
 @Component({
   selector: 'rc-timetable',
   templateUrl: './timetable.component.html'
 })
-export class TimetableComponent {
+export class TimetableComponent implements OnInit {
   rows;
   constructor(private calculatorService: CalculatorService) {}
 
