@@ -2,10 +2,27 @@
 
 <div class="form-group">
   <label for="distance_km">Kilometers</label>
-  <input id="distance_km" class="form-control" type="number" [formControl]="distanceForm.get('kilometers')">
+  <input
+    id="distance_km"
+    class="form-control"
+    [ngClass]="{
+      'is-valid': distanceForm.get('kilometers').valid,
+      'is-invalid': distanceForm.get('kilometers').invalid
+    }"
+    type="number"
+    [formControl]="distanceForm.get('kilometers')">
 </div>
+
 <div class="form-group">
   <label for="distance_m">Meters</label>
-  <input id="distance_m" class="form-control" type="number" [formControl]="distanceForm.get('meters')">
+  <input
+    id="distance_m"
+    class="form-control"
+    [ngClass]="{
+      'is-valid': distanceForm.get('meters').valid,
+      'is-invalid': distanceForm.get('meters').invalid
+    }"
+    type="number"
+    [formControl]="distanceForm.get('meters')">
 </div>
 

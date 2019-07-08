@@ -1,0 +1,8 @@
+- pace calculator
+- generic integer input component
+- error message for non-integer values
+- time calculator
+- distance calculator
+- distance input
+- time input
+- pace input
