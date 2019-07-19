@@ -9,7 +9,7 @@ import {TimeFormComponent} from './components/forms/time-form/time-form.componen
 import {ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {FormatterModule} from '../formatter/formatter.module';
-import {FormInputIntegerComponent} from "./components/form-input-integer/form-input-integer.component";
+import {FormInputIntegerComponent} from './components/form-input-integer/form-input-integer.component';
 
 @NgModule({
   declarations: [

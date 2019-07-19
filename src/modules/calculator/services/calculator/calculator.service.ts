@@ -3,6 +3,8 @@ import {union} from 'lodash';
 import {PaceCalculatorValue} from '../../types/pace-calculator-value';
 import {DistanceFormValue} from '../../types/distance-form-value';
 import {TimeFormValue} from '../../types/time-form-value';
+import {DistanceCalculatorValue} from '../../types/distance-calculator-value';
+import {PaceFormValue} from '../../types/pace-form-value';
 
 @Injectable()
 export class CalculatorService {
@@ -13,8 +15,11 @@ export class CalculatorService {
     return Math.floor(timeInSeconds / distanceInMeters * 1000);
   }
 
-  calculateDistance(distanceFormValue: DistanceFormValue) {
-    return 12345;
+  calculateDistance(distanceFormValue: DistanceCalculatorValue) {
+    const paceInSeconds = this.getPaceInSeconds(distanceFormValue.pace);
+    const timeInSeconds = this.getTimeInSeconds(distanceFormValue.time);
+
+    return Math.floor(timeInSeconds / paceInSeconds * 1000);
   }
 
   getTableData() {
@@ -59,5 +64,12 @@ export class CalculatorService {
     const seconds = timeFormValue.seconds || 0;
 
     return hours * 60 * 60 + minutes * 60 + seconds;
+  }
+
+  private getPaceInSeconds(paceFormValue: PaceFormValue) {
+    const minutes = paceFormValue.minutes || 0;
+    const seconds = paceFormValue.seconds || 0;
+
+    return minutes * 60 + seconds;
   }
 }
