@@ -4,8 +4,29 @@ import {DistanceCalculatorComponent} from '../calculator/components/calculators/
 import {TimeCalculatorComponent} from '../calculator/components/calculators/time-calculator/time-calculator';
 
 export const appRoutes: Routes = [
-  { path: 'distance', component: DistanceCalculatorComponent },
-  { path: 'pace', component: PaceCalculatorComponent },
-  { path: 'time', component: TimeCalculatorComponent },
-  { path: '**', redirectTo: 'pace' },
+  {
+    path: 'distance',
+    component: DistanceCalculatorComponent,
+    data: {
+      title: 'Distance calculator: pace + time = distance'
+    }
+  },
+  {
+    path: 'pace',
+    component: PaceCalculatorComponent,
+    data: {
+      title: 'Pace calculator: distance + time = pace'
+    }
+  },
+  {
+    path: 'time',
+    component: TimeCalculatorComponent,
+    data: {
+      title: 'Time calculator: distance + pace = time'
+    }
+  },
+  {
+    path: '**',
+    redirectTo: 'pace'
+  },
 ];

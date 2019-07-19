@@ -9,7 +9,7 @@ import {TimeFormComponent} from './components/forms/time-form/time-form.componen
 import {ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {FormatterModule} from '../formatter/formatter.module';
-import {ErrorMessageComponent} from "./components/error-message/error-message.component";
+import {ErrorMessageComponent} from './components/error-message/error-message.component';
 
 @NgModule({
   declarations: [
