@@ -1,7 +1,14 @@
-<h2 class="mb-4 text-center">Pace calculator</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2 mb-4">
+      <div class="text-center">
+        <h2>Pace calculator</h2>
+        <p>Calculate your running pace per kilometer and speed in km / h. Enter a distance and time and you'll get the associated tempo.</p>
+      </div>
+    </div>
+  </div>
 
-<form [formGroup]="paceForm" (ngSubmit)="calculate()">
-  <div class="container">
+  <form [formGroup]="paceForm" (ngSubmit)="calculate()">
     <div class="row">
       <div class="col-md-4 offset-md-2 mb-4 mb-md-2">
         <rc-distance-form [parentForm]="paceForm"></rc-distance-form>
@@ -21,5 +28,5 @@
         Your speed: <span class="font-weight-bold">{{ 60 * 60 / paceInSecs | rcSpeed }}</span><br>
       </div>
     </div>
-  </div>
-</form>
+  </form>
+</div>

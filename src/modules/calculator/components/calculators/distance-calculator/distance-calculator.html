@@ -1,7 +1,14 @@
-<h2 class="mb-4 text-center">Distance calculator</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2 mb-4">
+      <div class=" text-center">
+        <h2>Distance calculator</h2>
+        <p>How far can you run? Enter a pace and a time to calculate the distance.</p>
+      </div>
+    </div>
+  </div>
 
-<form [formGroup]="distanceForm" (ngSubmit)="calculate()">
-  <div class="container">
+  <form [formGroup]="distanceForm" (ngSubmit)="calculate()">
     <div class="row">
       <div class="col-md-4 offset-md-2 mb-4 mb-md-2">
         <rc-pace-form [parentForm]="distanceForm"></rc-pace-form>
@@ -20,5 +27,6 @@
         Your distance: <span class="font-weight-bold">{{ distanceInMeters | rcDistance }}</span>
       </div>
     </div>
-  </div>
-</form>
+  </form>
+</div>
+

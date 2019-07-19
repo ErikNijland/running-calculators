@@ -1,7 +1,14 @@
-<h2 class="mb-4 text-center">Time calculator</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2 mb-4">
+      <div class=" text-center">
+        <h2>Time calculator</h2>
+        <p>How long does it take? Enter your pace and a distance to calculate the time.</p>
+      </div>
+    </div>
+  </div>
 
-<form [formGroup]="timeForm" (ngSubmit)="calculate()">
-  <div class="container">
+  <form [formGroup]="timeForm" (ngSubmit)="calculate()">
     <div class="row">
       <div class="col-md-4 offset-md-2 mb-4 mb-md-2">
         <rc-pace-form [parentForm]="timeForm"></rc-pace-form>
@@ -20,5 +27,6 @@
         Your time: <span class="font-weight-bold">{{ timeInSeconds | rcTime }}</span>
       </div>
     </div>
-  </div>
-</form>
+  </form>
+</div>
+
