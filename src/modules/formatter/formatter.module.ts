@@ -4,11 +4,13 @@ import {SpeedPipe} from './pipes/speed/speed.pipe';
 import {TimePipe} from './pipes/time/time.pipe';
 import localeNl from '@angular/common/locales/nl';
 import {DecimalPipe, registerLocaleData} from '@angular/common';
+import {DistancePipe} from './pipes/distance/distance.pipe';
 
 registerLocaleData(localeNl);
 
 @NgModule({
   declarations: [
+    DistancePipe,
     PacePipe,
     SpeedPipe,
     TimePipe,
@@ -18,6 +20,7 @@ registerLocaleData(localeNl);
     DecimalPipe,
   ],
   exports: [
+    DistancePipe,
     PacePipe,
     SpeedPipe,
     TimePipe,

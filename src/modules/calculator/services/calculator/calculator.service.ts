@@ -13,6 +13,10 @@ export class CalculatorService {
     return Math.floor(timeInSeconds / distanceInMeters * 1000);
   }
 
+  calculateDistance(distanceFormValue: DistanceFormValue) {
+    return 12345;
+  }
+
   getTableData() {
     const minPaceInSecs = 210;
     const maxPaceInSecs = 600;

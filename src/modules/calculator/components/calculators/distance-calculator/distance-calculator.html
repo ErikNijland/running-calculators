@@ -1,1 +1,22 @@
-distance
+<h2 class="mb-4 text-center">Distance calculator</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 offset-md-2 mb-4 mb-md-0">
+      <rc-pace-form [parentForm]="distanceForm"></rc-pace-form>
+    </div>
+    <div class="col-md-4 mb-4 mb-md-0">
+      <rc-time-form [parentForm]="distanceForm"></rc-time-form>
+    </div>
+  </div>
+
+  <div class="col-8 offset-2 text-center">
+    <button class="btn btn-primary btn-lg" (click)="calculate()">
+      Calculate distance
+    </button>
+
+    <div *ngIf="distanceInMeters" class="alert alert-primary mt-4" role="alert">
+      Your distance: <span class="font-weight-bold">{{ distanceInMeters | rcDistance }}</span>
+    </div>
+  </div>
+</div>
