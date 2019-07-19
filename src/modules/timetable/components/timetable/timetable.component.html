@@ -1,32 +1,32 @@
 <div class="container">
   <table class="table table-hover">
-    <thead>
-    <tr>
-      <th>Pace</th>
-      <th>Speed</th>
-      <th class="text-right">1 km</th>
-      <th class="text-right">5 km</th>
-      <th class="text-right">10 km</th>
-      <th class="text-right">21.1 km</th>
-      <th class="text-right">42.195 km</th>
-    </tr>
+    <thead class="thead-dark">
+      <tr>
+        <th class="sticky-top border-top-0">Pace</th>
+        <th class="sticky-top border-top-0">Speed</th>
+        <th class="sticky-top border-top-0 text-right">1 km</th>
+        <th class="sticky-top border-top-0 text-right">5 km</th>
+        <th class="sticky-top border-top-0 text-right">10 km</th>
+        <th class="sticky-top border-top-0 text-right">21.1 km</th>
+        <th class="sticky-top border-top-0 text-right">42.195 km</th>
+      </tr>
     </thead>
     <tbody>
-    <tr
-      [ngClass]="{
-          'bg-primary text-white': row[0]
-        }"
-      *ngFor="let row of rows"
-      [id]="'pace-' + row[0]">
+      <tr
+        [ngClass]="{
+            'bg-primary text-white': row[0]
+          }"
+        *ngFor="let row of rows"
+        [id]="'pace-' + row[0]">
 
-      <th>{{row[1] | rcPace}} <ng-container *ngIf="row[0]">⭐</ng-container></th>
-      <th>{{row[2] | rcSpeed}}</th>
-      <td class="text-right">{{row[3] | rcTime}}</td>
-      <td class="text-right">{{row[4] | rcTime}}</td>
-      <td class="text-right">{{row[5] | rcTime}}</td>
-      <td class="text-right">{{row[6] | rcTime}}</td>
-      <td class="text-right">{{row[7] | rcTime}}</td>
-    </tr>
+        <th>{{row[1] | rcPace}} <ng-container *ngIf="row[0]">⭐</ng-container></th>
+        <th>{{row[2] | rcSpeed}}</th>
+        <td class="text-right">{{row[3] | rcTime}}</td>
+        <td class="text-right">{{row[4] | rcTime}}</td>
+        <td class="text-right">{{row[5] | rcTime}}</td>
+        <td class="text-right">{{row[6] | rcTime}}</td>
+        <td class="text-right">{{row[7] | rcTime}}</td>
+      </tr>
     </tbody>
   </table>
 </div>
