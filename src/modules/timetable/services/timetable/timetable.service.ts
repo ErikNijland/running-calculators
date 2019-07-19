@@ -21,7 +21,6 @@ export class TimetableService {
       return [
         paceInSecs,
         speedInKmH,
-        paceInSecs *  1000,
         paceInSecs *  5000,
         paceInSecs * 10000,
         paceInSecs * 21100,
