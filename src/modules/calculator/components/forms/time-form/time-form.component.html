@@ -1,43 +1,19 @@
 <h3 class="h4">Time</h3>
 
-<div class="form-group">
-  <label for="time_hours">Hours</label>
-  <input
-    id="time_hours"
-    class="form-control"
-    [ngClass]="{
-      'is-invalid': timeForm.get('hours').invalid
-    }"
-    type="number"
-    [formControl]="timeForm.get('hours')">
+<rc-form-input-integer
+  id="time_hours"
+  label="Hours"
+  [control]="timeForm.get('hours')">
+</rc-form-input-integer>
 
-  <rc-error-message *ngIf="timeForm.get('hours').invalid"></rc-error-message>
-</div>
+<rc-form-input-integer
+  id="time_minutes"
+  label="Minutes"
+  [control]="timeForm.get('minutes')">
+</rc-form-input-integer>
 
-<div class="form-group">
-  <label for="time_minutes">Minutes</label>
-  <input
-    id="time_minutes"
-    class="form-control"
-    [ngClass]="{
-      'is-invalid': timeForm.get('minutes').invalid
-    }"
-    type="number"
-    [formControl]="timeForm.get('minutes')">
-
-  <rc-error-message *ngIf="timeForm.get('minutes').invalid"></rc-error-message>
-</div>
-
-<div class="form-group">
-  <label for="time_seconds">Seconds</label>
-  <input
-    id="time_seconds"
-    class="form-control"
-    [ngClass]="{
-      'is-invalid': timeForm.get('seconds').invalid
-    }"
-    type="number"
-    [formControl]="timeForm.get('seconds')">
-
-  <rc-error-message *ngIf="timeForm.get('seconds').invalid"></rc-error-message>
-</div>
+<rc-form-input-integer
+  id="time_seconds"
+  label="Seconds"
+  [control]="timeForm.get('seconds')">
+</rc-form-input-integer>

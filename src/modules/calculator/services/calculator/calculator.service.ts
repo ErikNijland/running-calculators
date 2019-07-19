@@ -14,8 +14,8 @@ export class CalculatorService {
   }
 
   getTableData() {
-    const minPaceInSecs = 270;
-    const maxPaceInSecs = 510;
+    const minPaceInSecs = 210;
+    const maxPaceInSecs = 600;
     const stepSizeInSecs = 1;
     const numberOfSteps = (maxPaceInSecs - minPaceInSecs) / stepSizeInSecs + 1;
 
@@ -43,10 +43,17 @@ export class CalculatorService {
   }
 
   private getDistanceInMeters(distanceFormValue: DistanceFormValue) {
-    return distanceFormValue.kilometers * 1000 + distanceFormValue.meters;
+    const kilometers = distanceFormValue.kilometers || 0;
+    const meters = distanceFormValue.meters || 0;
+
+    return kilometers * 1000 + meters;
   }
 
   private getTimeInSeconds(timeFormValue: TimeFormValue) {
-    return timeFormValue.hours * 60 * 60 + timeFormValue.minutes * 60 + timeFormValue.seconds;
+    const hours = timeFormValue.hours || 0;
+    const minutes = timeFormValue.minutes || 0;
+    const seconds = timeFormValue.seconds || 0;
+
+    return hours * 60 * 60 + minutes * 60 + seconds;
   }
 }

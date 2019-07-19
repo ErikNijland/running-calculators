@@ -8,30 +8,14 @@
   <li><a href="">Marathon</a></li>
 </ul>
 
-<div class="form-group">
-  <label for="distance_km">Kilometers</label>
-  <input
-    id="distance_km"
-    class="form-control"
-    [ngClass]="{
-      'is-invalid': distanceForm.get('kilometers').invalid
-    }"
-    type="number"
-    [formControl]="distanceForm.get('kilometers')">
+<rc-form-input-integer
+  id="distance_km"
+  label="Kilometers"
+  [control]="distanceForm.get('kilometers')">
+</rc-form-input-integer>
 
-  <rc-error-message *ngIf="distanceForm.get('kilometers').invalid"></rc-error-message>
-</div>
-
-<div class="form-group">
-  <label for="distance_m">Meters</label>
-  <input
-    id="distance_m"
-    class="form-control"
-    [ngClass]="{
-      'is-invalid': distanceForm.get('meters').invalid
-    }"
-    type="number"
-    [formControl]="distanceForm.get('meters')">
-
-  <rc-error-message *ngIf="distanceForm.get('meters').invalid"></rc-error-message>
-</div>
+<rc-form-input-integer
+  id="distance_m"
+  label="Meters"
+  [control]="distanceForm.get('meters')">
+</rc-form-input-integer>
