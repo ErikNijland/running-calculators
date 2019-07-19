@@ -4,7 +4,8 @@ import {TimetableService} from '../../services/timetable/timetable.service';
 
 @Component({
   selector: 'rc-timetable',
-  templateUrl: './timetable.component.html'
+  templateUrl: './timetable.component.html',
+  styleUrls: ['./timetable.component.scss'],
 })
 export class TimetableComponent implements OnInit {
   rows: Timetable;
