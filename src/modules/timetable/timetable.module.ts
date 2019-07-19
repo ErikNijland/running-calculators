@@ -2,14 +2,16 @@ import {NgModule} from '@angular/core';
 import {TimetableComponent} from './components/timetable/timetable.component';
 import {FormatterModule} from '../formatter/formatter.module';
 import {CommonModule} from '@angular/common';
-import {CalculatorModule} from '../calculator/calculator.module';
+import {TimetableService} from "./services/timetable/timetable.service";
 
 @NgModule({
   declarations: [
     TimetableComponent,
   ],
+  providers: [
+    TimetableService,
+  ],
   imports: [
-    CalculatorModule,
     CommonModule,
     FormatterModule,
   ],

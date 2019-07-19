@@ -12,20 +12,14 @@
       </tr>
     </thead>
     <tbody>
-      <tr
-        [ngClass]="{
-            'bg-primary text-white': row[0]
-          }"
-        *ngFor="let row of rows"
-        [id]="'pace-' + row[0]">
-
-        <th class="text-nowrap">{{row[1] | rcPace}} <ng-container *ngIf="row[0]">⭐</ng-container></th>
-        <th class="text-nowrap">{{row[2] | rcSpeed}}</th>
+      <tr *ngFor="let row of rows">
+        <th class="text-nowrap">{{row[0] | rcPace}}</th>
+        <th class="text-nowrap">{{row[1] | rcSpeed}}</th>
+        <td class="text-nowrap text-right">{{row[2] | rcTime}}</td>
         <td class="text-nowrap text-right">{{row[3] | rcTime}}</td>
         <td class="text-nowrap text-right">{{row[4] | rcTime}}</td>
         <td class="text-nowrap text-right">{{row[5] | rcTime}}</td>
         <td class="text-nowrap text-right">{{row[6] | rcTime}}</td>
-        <td class="text-nowrap text-right">{{row[7] | rcTime}}</td>
       </tr>
     </tbody>
   </table>

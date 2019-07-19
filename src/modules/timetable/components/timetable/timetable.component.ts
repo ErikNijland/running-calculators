@@ -1,15 +1,17 @@
 import {Component, OnInit} from '@angular/core';
-import {CalculatorService} from '../../../calculator/services/calculator/calculator.service';
+import {Timetable} from "../../types/timetable";
+import {TimetableService} from "../../services/timetable/timetable.service";
 
 @Component({
   selector: 'rc-timetable',
   templateUrl: './timetable.component.html'
 })
 export class TimetableComponent implements OnInit {
-  rows;
-  constructor(private calculatorService: CalculatorService) {}
+  rows: Timetable;
+
+  constructor(private timetableService: TimetableService) {}
 
   ngOnInit() {
-    this.rows = this.calculatorService.getTableData();
+    this.rows = this.timetableService.getRows();
   }
 }

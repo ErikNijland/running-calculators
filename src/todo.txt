@@ -1,6 +1,3 @@
 - form group validation > 0
-- remove user calculations in timetable
-- timetable interface
 - check whitespace in ui
-- fix github access
 - deploy
