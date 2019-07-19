@@ -1,12 +1,14 @@
-import {Directive, ElementRef, OnInit} from '@angular/core';
+import {Directive, ElementRef, Input, OnChanges} from '@angular/core';
 
 @Directive({
   selector: '[rcScrollIntoView]',
 })
-export class ScrollIntoViewDirective implements OnInit {
+export class ScrollIntoViewDirective implements OnChanges {
+  @Input() rcScrollIntoView: number;
+
   constructor(private elementRef: ElementRef) {}
 
-  ngOnInit() {
+  ngOnChanges() {
     this.elementRef.nativeElement.scrollIntoView();
   }
 }
