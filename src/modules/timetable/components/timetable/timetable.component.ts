@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Timetable} from "../../types/timetable";
-import {TimetableService} from "../../services/timetable/timetable.service";
+import {Timetable} from '../../types/timetable';
+import {TimetableService} from '../../services/timetable/timetable.service';
 
 @Component({
   selector: 'rc-timetable',

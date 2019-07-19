@@ -17,7 +17,6 @@ export class PaceCalculatorComponent implements OnInit {
   }
 
   calculate() {
-    console.log(this.paceForm.valid);
     if (!this.paceForm.valid) {
       this.paceInSecs = null;
 
@@ -25,6 +24,5 @@ export class PaceCalculatorComponent implements OnInit {
     }
 
     this.paceInSecs = this.calculatorService.calculatePace(this.paceForm.value);
-    console.log(this.paceInSecs);
   }
 }

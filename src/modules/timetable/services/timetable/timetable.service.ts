@@ -1,6 +1,6 @@
-import {Injectable} from "@angular/core";
+import {Injectable} from '@angular/core';
 import {union} from 'lodash';
-import {Timetable} from "../../types/timetable";
+import {Timetable} from '../../types/timetable';
 
 @Injectable()
 export class TimetableService {
