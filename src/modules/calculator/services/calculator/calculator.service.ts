@@ -5,17 +5,25 @@ import {DistanceFormValue} from '../../types/distance-form-value';
 import {TimeFormValue} from '../../types/time-form-value';
 import {DistanceCalculatorValue} from '../../types/distance-calculator-value';
 import {PaceFormValue} from '../../types/pace-form-value';
+import {TimeCalculatorValue} from '../../types/time-calculator-value';
 
 @Injectable()
 export class CalculatorService {
-  calculatePace(paceFormValue: PaceCalculatorValue) {
+  calculatePace(paceFormValue: PaceCalculatorValue): number {
     const distanceInMeters = this.getDistanceInMeters(paceFormValue.distance);
     const timeInSeconds = this.getTimeInSeconds(paceFormValue.time);
 
     return Math.floor(timeInSeconds / distanceInMeters * 1000);
   }
 
-  calculateDistance(distanceFormValue: DistanceCalculatorValue) {
+  calculateTime(timeFormValue: TimeCalculatorValue): number {
+    const paceInSeconds = this.getPaceInSeconds(timeFormValue.pace);
+    const distanceInMeters = this.getDistanceInMeters(timeFormValue.distance);
+
+    return paceInSeconds * distanceInMeters;
+  }
+
+  calculateDistance(distanceFormValue: DistanceCalculatorValue): number {
     const paceInSeconds = this.getPaceInSeconds(distanceFormValue.pace);
     const timeInSeconds = this.getTimeInSeconds(distanceFormValue.time);
 

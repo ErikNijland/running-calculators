@@ -1,4 +1,6 @@
-- time calculator
 - form group validation > 0
-- show user calculations in timetable
+- remove user calculations in timetable
+- timetable interface
 - check whitespace in ui
+- fix github access
+- deploy

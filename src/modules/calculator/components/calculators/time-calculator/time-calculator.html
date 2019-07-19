@@ -1,1 +1,22 @@
-time
+<h2 class="mb-4 text-center">Time calculator</h2>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 offset-md-2 mb-4 mb-md-0">
+      <rc-pace-form [parentForm]="timeForm"></rc-pace-form>
+    </div>
+    <div class="col-md-4 mb-4 mb-md-0">
+      <rc-distance-form [parentForm]="timeForm"></rc-distance-form>
+    </div>
+  </div>
+
+  <div class="col-8 offset-2 text-center">
+    <button class="btn btn-primary btn-lg" (click)="calculate()">
+      Calculate time
+    </button>
+
+    <div *ngIf="timeInSeconds" class="alert alert-primary mt-4" role="alert">
+      Your time: <span class="font-weight-bold">{{ timeInSeconds | rcTime }}</span>
+    </div>
+  </div>
+</div>
