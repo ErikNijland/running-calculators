@@ -10,6 +10,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {FormatterModule} from '../formatter/formatter.module';
 import {FormInputIntegerComponent} from './components/form-input-integer/form-input-integer.component';
+import {ScrollIntoViewDirective} from './directives/scroll-into-view/scroll-into-view.directive';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import {FormInputIntegerComponent} from './components/form-input-integer/form-in
     FormInputIntegerComponent,
     PaceCalculatorComponent,
     PaceFormComponent,
+    ScrollIntoViewDirective,
     TimeCalculatorComponent,
     TimeFormComponent,
   ],

@@ -2,7 +2,7 @@ import {Routes} from '@angular/router';
 import {PaceCalculatorComponent} from '../calculator/components/calculators/pace-calculator/pace-calculator';
 import {DistanceCalculatorComponent} from '../calculator/components/calculators/distance-calculator/distance-calculator';
 import {TimeCalculatorComponent} from '../calculator/components/calculators/time-calculator/time-calculator';
-import {TimetableComponent} from "../timetable/components/timetable/timetable.component";
+import {TimetableComponent} from '../timetable/components/timetable/timetable.component';
 
 export const appRoutes: Routes = [
   {
