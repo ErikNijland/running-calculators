@@ -16,7 +16,8 @@
     </button>
 
     <div *ngIf="paceInSecs" class="alert alert-primary mt-4" role="alert">
-      Your pace: <span class="font-weight-bold">{{ paceInSecs | rcPace }}</span>
+      Your pace: <span class="font-weight-bold">{{ paceInSecs | rcPace }}</span><br>
+      Your speed: <span class="font-weight-bold">{{ 60 * 60 / paceInSecs | rcSpeed }}</span><br>
     </div>
   </div>
 </div>
