@@ -13,8 +13,8 @@ export class DistanceFormComponent implements OnInit {
 
   ngOnInit() {
     this.distanceForm = new FormGroup({
-      kilometers: new FormControl(0, [ isInteger ]),
-      meters: new FormControl(0, [ isInteger ]),
+      kilometers: new FormControl(null, [ isInteger ]),
+      meters: new FormControl(null, [ isInteger ]),
     });
 
     this.parentForm.addControl('distance', this.distanceForm);

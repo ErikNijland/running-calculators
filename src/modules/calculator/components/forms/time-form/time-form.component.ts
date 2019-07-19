@@ -13,9 +13,9 @@ export class TimeFormComponent implements OnInit {
 
   ngOnInit() {
     this.timeForm = new FormGroup({
-      hours: new FormControl(0, [ isInteger ]),
-      minutes: new FormControl(0, [ isInteger ]),
-      seconds: new FormControl(0, [ isInteger ]),
+      hours: new FormControl(null, [ isInteger ]),
+      minutes: new FormControl(null, [ isInteger ]),
+      seconds: new FormControl(null, [ isInteger ]),
     });
 
     this.parentForm.addControl('time', this.timeForm);

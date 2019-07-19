@@ -7,8 +7,7 @@
       'is-invalid': control.invalid
     }"
     type="number"
-    [formControl]="control"
-    rcSelectAllText>
+    [formControl]="control">
 
   <div *ngIf="control.invalid" class="text-danger" aria-describedby="id">Please enter a whole number.</div>
 </div>

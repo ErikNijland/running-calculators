@@ -11,7 +11,6 @@ import {CommonModule} from '@angular/common';
 import {FormatterModule} from '../formatter/formatter.module';
 import {FormInputIntegerComponent} from './components/form-input-integer/form-input-integer.component';
 import {ScrollIntoViewDirective} from './directives/scroll-into-view/scroll-into-view.directive';
-import {SelectAllTextDirective} from './directives/select-all-text/select-all-text.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +20,6 @@ import {SelectAllTextDirective} from './directives/select-all-text/select-all-te
     PaceCalculatorComponent,
     PaceFormComponent,
     ScrollIntoViewDirective,
-    SelectAllTextDirective,
     TimeCalculatorComponent,
     TimeFormComponent,
   ],

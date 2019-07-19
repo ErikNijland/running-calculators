@@ -13,8 +13,8 @@ export class PaceFormComponent implements OnInit {
 
   ngOnInit() {
     this.paceForm = new FormGroup({
-      minutes: new FormControl(0, [ isInteger ]),
-      seconds: new FormControl(0, [ isInteger ]),
+      minutes: new FormControl(null, [ isInteger ]),
+      seconds: new FormControl(null, [ isInteger ]),
     });
 
     this.parentForm.addControl('pace', this.paceForm);
