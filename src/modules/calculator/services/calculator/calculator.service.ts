@@ -16,7 +16,7 @@ export class CalculatorService {
   getTableData() {
     const minPaceInSecs = 270;
     const maxPaceInSecs = 510;
-    const stepSizeInSecs = 5;
+    const stepSizeInSecs = 1;
     const numberOfSteps = (maxPaceInSecs - minPaceInSecs) / stepSizeInSecs + 1;
 
     const generatedPaceEntries = Array.from({length: numberOfSteps}, (_, index: number) => {
