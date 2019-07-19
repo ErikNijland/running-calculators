@@ -3,7 +3,6 @@
 - pace input
 - form group validation > 0
 - generic integer input component
-- make ui responsive
 - show user calculations in timetable
 - check whitespace in ui
 - distance quick links

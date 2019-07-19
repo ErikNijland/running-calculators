@@ -19,13 +19,13 @@
         *ngFor="let row of rows"
         [id]="'pace-' + row[0]">
 
-        <th>{{row[1] | rcPace}} <ng-container *ngIf="row[0]">⭐</ng-container></th>
-        <th>{{row[2] | rcSpeed}}</th>
-        <td class="text-right">{{row[3] | rcTime}}</td>
-        <td class="text-right">{{row[4] | rcTime}}</td>
-        <td class="text-right">{{row[5] | rcTime}}</td>
-        <td class="text-right">{{row[6] | rcTime}}</td>
-        <td class="text-right">{{row[7] | rcTime}}</td>
+        <th class="text-nowrap">{{row[1] | rcPace}} <ng-container *ngIf="row[0]">⭐</ng-container></th>
+        <th class="text-nowrap">{{row[2] | rcSpeed}}</th>
+        <td class="text-nowrap text-right">{{row[3] | rcTime}}</td>
+        <td class="text-nowrap text-right">{{row[4] | rcTime}}</td>
+        <td class="text-nowrap text-right">{{row[5] | rcTime}}</td>
+        <td class="text-nowrap text-right">{{row[6] | rcTime}}</td>
+        <td class="text-nowrap text-right">{{row[7] | rcTime}}</td>
       </tr>
     </tbody>
   </table>
