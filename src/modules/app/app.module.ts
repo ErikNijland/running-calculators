@@ -7,6 +7,8 @@ import {TimetableModule} from '../timetable/timetable.module';
 import {CalculatorModule} from '../calculator/calculator.module';
 import {RouterModule} from '@angular/router';
 import {appRoutes} from './app.routes';
+import {GoogleAnalyticsService} from './services/google-analytics/google-analytics.service';
+import {NavigationService} from './services/navigation/navigation.service';
 import {DocumentTitleService} from './services/document-title/document-title.service';
 
 
@@ -17,6 +19,8 @@ import {DocumentTitleService} from './services/document-title/document-title.ser
   ],
   providers: [
     DocumentTitleService,
+    GoogleAnalyticsService,
+    NavigationService,
   ],
   imports: [
     RouterModule.forRoot(appRoutes),

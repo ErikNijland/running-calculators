@@ -1,5 +1,4 @@
 import {Injectable} from '@angular/core';
-import {union} from 'lodash';
 import {Timetable} from '../../types/timetable';
 
 @Injectable()
