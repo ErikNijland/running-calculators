@@ -19,4 +19,11 @@ export class DistanceFormComponent implements OnInit {
 
     this.parentForm.addControl('distance', this.distanceForm);
   }
+
+  setDistance(kilometers: number, meters: number) {
+    this.distanceForm.setValue({
+      kilometers,
+      meters,
+    });
+  }
 }

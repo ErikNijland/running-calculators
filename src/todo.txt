@@ -4,4 +4,3 @@
 - form group validation > 0
 - show user calculations in timetable
 - check whitespace in ui
-- distance quick links
