@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormGroup} from '@angular/forms';
-import {CalculatorService} from '../../services/calculator/calculator.service';
+import {CalculatorService} from '../../../services/calculator/calculator.service';
 
 @Component({
   selector: 'rc-pace-calculator',

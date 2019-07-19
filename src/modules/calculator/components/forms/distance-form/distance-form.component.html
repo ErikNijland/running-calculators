@@ -19,6 +19,8 @@
     }"
     type="number"
     [formControl]="distanceForm.get('kilometers')">
+
+  <rc-error-message *ngIf="distanceForm.get('kilometers').invalid"></rc-error-message>
 </div>
 
 <div class="form-group">
@@ -32,4 +34,6 @@
     }"
     type="number"
     [formControl]="distanceForm.get('meters')">
+
+  <rc-error-message *ngIf="distanceForm.get('meters').invalid"></rc-error-message>
 </div>

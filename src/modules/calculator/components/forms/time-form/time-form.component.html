@@ -11,6 +11,8 @@
     }"
     type="number"
     [formControl]="timeForm.get('hours')">
+
+  <rc-error-message *ngIf="timeForm.get('hours').invalid"></rc-error-message>
 </div>
 
 <div class="form-group">
@@ -24,6 +26,8 @@
     }"
     type="number"
     [formControl]="timeForm.get('minutes')">
+
+  <rc-error-message *ngIf="timeForm.get('minutes').invalid"></rc-error-message>
 </div>
 
 <div class="form-group">
@@ -37,4 +41,6 @@
     }"
     type="number"
     [formControl]="timeForm.get('seconds')">
+
+  <rc-error-message *ngIf="timeForm.get('seconds').invalid"></rc-error-message>
 </div>

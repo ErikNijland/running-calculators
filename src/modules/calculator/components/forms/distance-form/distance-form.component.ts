@@ -1,6 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
-import {isInteger} from '../../validators/is-integer/is-integer';
+import {isInteger} from '../../../validators/is-integer/is-integer';
 
 @Component({
   selector: 'rc-distance-form',

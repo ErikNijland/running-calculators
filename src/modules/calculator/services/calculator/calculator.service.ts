@@ -10,7 +10,7 @@ export class CalculatorService {
     const distanceInMeters = this.getDistanceInMeters(paceFormValue.distance);
     const timeInSeconds = this.getTimeInSeconds(paceFormValue.time);
 
-    return Math.ceil(timeInSeconds / distanceInMeters * 1000);
+    return Math.floor(timeInSeconds / distanceInMeters * 1000);
   }
 
   getTableData() {
